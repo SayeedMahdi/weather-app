@@ -1,3 +1,5 @@
+import WeatgerData from "../components/WeatgerData"
+
 async function getWeather() {
 	const response = await fetch(
 		`https://api.open-meteo.com/v1/dwd-icon?latitude=52.52&longitude=13.41&daily=temperature_2m_max&timezone=America%2FChicago`
@@ -42,7 +44,7 @@ function getMont(data) {
 
 const page = async () => {
 	const data = await getWeather()
-	console.log(data)
+
 	return (
 		<div className="w-full mt-16 lg:mt-64 lg:px-40 justify-center container mx-auto">
 			<div className="flex flex-wrap w-full lg:w-auto">
@@ -73,59 +75,7 @@ const page = async () => {
 					</div>
 				</div>
 
-				<div className="w-full lg:w-1/2 flex ml-0">
-					<div className="lg:my-3 bg-gray-800 text-white p-8 lg:rounded-r-lg w-full">
-						<div className="flex justify-between w-64 mb-4 w-full">
-							<div className="w-auto font-bold uppercase text-90">
-								Precipitation
-							</div>
-							<div className="w-auto text-right">10 %</div>
-						</div>
-						<div className="flex justify-between w-64 mb-4 w-full">
-							<div className="w-auto font-bold uppercase text-90">Humidity</div>
-							<div className="w-auto text-right">29 %</div>
-						</div>
-						<div className="flex justify-between w-64 mb-8 w-full">
-							<div className="w-auto font-bold uppercase text-90">Wind</div>
-							<div className="w-auto text-right">12 Mph</div>
-						</div>
-						<div className="flex flex-row">
-							<div className="flex flex-col w-1/4 bg-gray-100 text-black rounded-lg pb-4">
-								<div className="text-center pt-2 mb-2"></div>
-								<div className="text-center">
-									<b className="font-normal">Tue</b>
-									<br />
-									<strong className="text-xl">29ºC</strong>
-								</div>
-							</div>
-
-							<div className="flex flex-col w-1/4 bg-gray-900 rounded-lg">
-								<div className="text-center pt-2 mb-2"></div>
-								<div className="text-center">
-									<b className="font-normal">Wed</b>
-									<br />
-									<strong className="text-xl">21ºC</strong>
-								</div>
-							</div>
-							<div className="flex flex-col w-1/4 bg-gray-900 rounded-lg">
-								<div className="text-center pt-2 mb-2"></div>
-								<div className="text-center">
-									<b className="font-normal">Thu</b>
-									<br />
-									<strong className="text-xl">18ºC</strong>
-								</div>
-							</div>
-							<div className="flex flex-col w-1/4 bg-gray-900 rounded-lg">
-								<div className="text-center pt-2 mb-2"></div>
-								<div className="text-center">
-									<b className="font-normal">Fri</b>
-									<br />
-									<strong className="text-xl">25ºC</strong>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<WeatgerData weather={data} />
 			</div>
 		</div>
 	)
