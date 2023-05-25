@@ -6,11 +6,14 @@ import Testimonial from "../components/Testimonial"
 import Cta from "../components/Cta"
 import { Footer } from "../components/Footer"
 import "../styles/tailwind.module.css"
+import Image from "next/image"
 
 const page = () => {
 	return (
 		<div id="big-company">
-			<img
+			<Image
+				width={1000}
+				height={1000}
 				src="/img/bg-tablet-pattern.svg"
 				className="absolute -right-20 -top-10 -z-10"
 			/>
