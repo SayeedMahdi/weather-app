@@ -25,3 +25,11 @@
 		)
 		rgb(var(--background-start-rgb));
 } */
+
+.my-site {
+	background-image: url("/img/bg-tablet-pattern.svg");
+	background-size: 800px;
+	background-repeat: no-repeat;
+	/* background-position: 90% - 25%;
+	 */
+}
