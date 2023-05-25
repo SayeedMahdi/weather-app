@@ -18,10 +18,6 @@ const Cta = () => {
 					>
 						Get Started
 					</a>
-					<img
-						src="/img/bg-simplify-section-desktop.svg"
-						className="absolute left-0 -z-10 "
-					/>
 				</div>
 			</div>
 		</section>

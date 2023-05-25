@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 export const Footer = () => {
 	return (
@@ -13,29 +14,65 @@ export const Footer = () => {
 					</div>
 					{/* <!-- Logo --> */}
 					<div>
-						<img src="img/logo-white.svg" class="h-8" alt="" />
+						<Image
+							width={300}
+							height={200}
+							src="img/logo-white.svg"
+							class="h-8"
+							alt=""
+						/>
 					</div>
 					{/* <!-- Social Links Container --> */}
 					<div class="flex justify-center space-x-4">
 						{/* <!-- Link 1 --> */}
 						<a href="#">
-							<img src="img/icon-facebook.svg" alt="" class="h-8" />
+							<Image
+								width={40}
+								height={40}
+								src="img/icon-facebook.svg"
+								alt=""
+								class="h-8"
+							/>
 						</a>
 						{/* <!-- Link 2 --> */}
 						<a href="#">
-							<img src="img/icon-youtube.svg" alt="" class="h-8" />
+							<Image
+								width={40}
+								height={40}
+								src="img/icon-youtube.svg"
+								alt=""
+								class="h-8"
+							/>
 						</a>
 						{/* <!-- Link 3 --> */}
 						<a href="#">
-							<img src="img/icon-twitter.svg" alt="" class="h-8" />
+							<Image
+								width={40}
+								height={40}
+								src="img/icon-twitter.svg"
+								alt=""
+								class="h-8"
+							/>
 						</a>
 						{/* <!-- Link 4 --> */}
 						<a href="#">
-							<img src="img/icon-pinterest.svg" alt="" class="h-8" />
+							<Image
+								width={40}
+								height={40}
+								src="img/icon-pinterest.svg"
+								alt=""
+								class="h-8"
+							/>
 						</a>
 						{/* <!-- Link 5 --> */}
 						<a href="#">
-							<img src="img/icon-instagram.svg" alt="" class="h-8" />
+							<Image
+								width={40}
+								height={40}
+								src="img/icon-instagram.svg"
+								alt=""
+								class="h-8"
+							/>
 						</a>
 					</div>
 				</div>
